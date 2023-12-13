@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'student',
+    'test',
+    'courses',
+    'level_of_education',
+    'specializations',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'sih', 
         'USER': 'postgres',
-        'PASSWORD': '2359361',
+        'PASSWORD': 'password',
         'HOST': '127.0.0.1', 
         'PORT': '5450',
     }
