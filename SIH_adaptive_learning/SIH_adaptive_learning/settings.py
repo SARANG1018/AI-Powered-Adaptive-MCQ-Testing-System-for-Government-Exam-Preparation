@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'level_of_education.apps.LevelOfEducationConfig',
     'specializations.apps.SpecializationsConfig',
+    'questions.apps.QuestionsConfig',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'sih1', 
         'USER': 'postgres',
-        'PASSWORD': 'password',
+        'PASSWORD': '2359361',
         'HOST': '127.0.0.1', 
         'PORT': '5450',
     }
