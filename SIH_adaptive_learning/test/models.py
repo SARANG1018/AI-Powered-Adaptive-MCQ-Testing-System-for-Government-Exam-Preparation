@@ -11,3 +11,6 @@ class Test(models.Model):
 
     def __str__(self):
         return f"Test {self.test_id} - Student: {self.student_id.student_name}, Specialization: {self.specialization_id.specialization_name}, Date: {self.date}"
+    
+    class Meta: 
+        db_table = 'test'
