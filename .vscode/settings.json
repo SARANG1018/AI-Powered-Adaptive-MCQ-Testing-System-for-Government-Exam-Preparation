@@ -6,7 +6,7 @@
             "port": 5450,
             "driver": "PostgreSQL",
             "name": "SIH",
-            "database": "sih",
+            "database": "sih1",
             "username": "postgres",
             "password": "2359361"
         }

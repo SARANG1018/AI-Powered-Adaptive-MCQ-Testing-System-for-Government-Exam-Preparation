@@ -7,7 +7,7 @@ class Specialization(models.Model):
     year_of_study = models.DateField()
     specialization_name = models.TextField()
     specialization_syllabus = models.TextField()
-    specialization_reference_books = models.TextField()
+    specialization_reference_books = models.TextField(null=True,blank=True)
     course = models.ForeignKey(Courses, on_delete=models.CASCADE)
 
     def __str__(self):
