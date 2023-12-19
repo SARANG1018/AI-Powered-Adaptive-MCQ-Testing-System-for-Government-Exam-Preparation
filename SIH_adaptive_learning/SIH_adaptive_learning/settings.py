@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'level_of_education.apps.LevelOfEducationConfig',
     'specializations.apps.SpecializationsConfig',
     'questions.apps.QuestionsConfig',
-    # 'question_analytics.apps.QuestionAnalyticsConfig',
+    'question_analytics.apps.QuestionAnalyticsConfig',
 ]
 
 MIDDLEWARE = [
