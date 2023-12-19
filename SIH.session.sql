@@ -9,6 +9,12 @@ create DATABASE sih1;
 --@block
 SELECT * FROM questions;
 
+--@block
+delete FROM questions;
 
 --@block
-SELECT * FROM question_options;
+SELECT * FROM ques2special;
+
+
+--@block
+SELECT * FROM options;
