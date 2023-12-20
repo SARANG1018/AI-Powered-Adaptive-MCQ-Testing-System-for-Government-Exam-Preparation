@@ -1,0 +1,525 @@
+"id","title","answer_id","specialization","attachment","rating"
+"158378","Which of the following is a widely used and effective machine learning algorithm based on the idea of bagging","632349","Deep & Reinforcement Learning","",4
+"112049","Log loss Is also known as	Which vendor recently launched a cloud-based test and development service for 
+enterprises?","447120","Deep & Reinforcement Learning","",3
+"112051","Deep learning is preferred over machine learning when","447128","Deep & Reinforcement Learning","",3
+"112056","When you use 1×1 convolutions in a CNN, what problem can arise?","447147","Deep & Reinforcement Learning","",4
+"112065","Assume a simple MLP model with 3 neurons and inputs= 2,2,3. The weights to the input neurons are 5,5 and 5 respectively. Assume the activation function is a linear constant value of 3. What will be the output ?.","447184","Deep & Reinforcement Learning","",3
+"112071","If you want to recognize a cat in a photo, which architecture of neural network would you prefer","447205","Deep & Reinforcement Learning","",5
+"112074","Chess game example falls under","447219","Deep & Reinforcement Learning","",3
+"112083","Training accuracy is denoted by the red curve below with respect to each epoch in a deep learning algorithm. Both the green and blue curves denote validation accuracy.
+Which of these indicate generalization of model?","447254","Deep & Reinforcement Learning","https://aslapapi.aicte-india.org/files/questions/Question_1624332470.png",4
+"112090","Consider the below diagram of  McCulloch-pitts model of neuron. What can be understood as a nature of function F(x) in the figure?","447283","Deep & Reinforcement Learning","https://aslapapi.aicte-india.org/files/questions/Question_1624332673.png",3
+"112100","Exploding gradient problem is an common issue in training deep networks. How to deal with “Exploding Gradient” problem in RNNs?","447322","Deep & Reinforcement Learning","",4
+"113460","A color image of size 200 x 200 is given as input to a CNN with a convolutional layer having 64 filters that are each 5x5. How many parameters does this hidden layer have (without bias parameters)?","452761","Deep & Reinforcement Learning","",3
+"112098","Consider the above matrix which is  a input to  Max-Pooling layer in a CNN. The pooling size of neurons in the layer is (3, 3). What would be the output of this Pooling layer?","","Deep & Reinforcement Learning","https://aslapapi.aicte-india.org/files/questions/Qestion_1624333176.png",4
+"114087","________________ is the function which handles multinomial labeling system when it is used in output layer","455266","Deep & Reinforcement Learning","",5
+"114128","__________ are an example of a network that uses unsupervised learning to train two models in parallel","455431","Deep & Reinforcement Learning","",0
+"120824","Which one of the following is incorrect statement?","482185","Deep & Reinforcement Learning","",3
+"128413","Which one of the following statement is true?","512539","Deep & Reinforcement Learning","",4
+"128446","____________ is a regularization technique that results in gradient descent shrinking the weights on every iteration.","512671","Deep & Reinforcement Learning","",5
+"131314","The last layer of a typical Deep learning network is a","524136","Deep & Reinforcement Learning","",3
+"137196","The output of the sigmoid function lies between the range","547661","Deep & Reinforcement Learning","",3
+"139886","Consider the McCulloch-Pitts Neuron Model. Find the correct output function y","558418","Deep & Reinforcement Learning","https://aslapapi.aicte-india.org/files/questions/Question_1624788068.PNG",4
+"140082","Choose the network best suited for time series data","559201","Deep & Reinforcement Learning","",4
+"140487","Which one of the following is not true about sigmoid activation function?","560822","Deep & Reinforcement Learning","",4
+"140509","Which of the following is not a loss function?","560908","Deep & Reinforcement Learning","",5
+"144630","Which of the following functions can be used as an activation function in the output layer if we wish to predict the probabilities of n classes (p1, p2..pk) such that sum of p over all n equals to 1?","577366","Deep & Reinforcement Learning","",5
+"144658","Which of the following neural network training challenge can be solved using batch normalization?","577479","Deep & Reinforcement Learning","",4
+"88204","The input image has been converted into a matrix of size 28 X 28 and a kernel/filter of size 7 X 7 with a stride of 1. What will be the size of the convoluted matrix?","351766","Deep & Reinforcement Learning","",3
+"97061","Which one of the following statements is true?","387182","Deep & Reinforcement Learning","",3
+"97332","If we have 7 filters that are 3X3X3 in one layer of a neural network, how many parameters does that layer have?","388265","Deep & Reinforcement Learning","",3
+"112002","Which of following is a characteristics of  neuron in a ANN?","446930","Deep & Reinforcement Learning","",4
+"112007","How to reduce overfitting in deep learning models?","446952","Deep & Reinforcement Learning","",3
+"112019","Does gradient descent is used in backpropagaion learning","446997","Deep & Reinforcement Learning","",3
+"112026","Weight sharing occur in which of the following?","447028","Deep & Reinforcement Learning","",3
+"112027","If we choose learning rate that’s too large, what might happen","447030","Deep & Reinforcement Learning","",5
+"97041","Which one of the following is not a hyperparameter?","387103","Deep & Reinforcement Learning","",5
+"112028","How to handle skewed target variable distribution","447036","Deep & Reinforcement Learning","",0
+"112034","Hyperbolic tangent activation function changes output","447058","Deep & Reinforcement Learning","",3
+"112045","Max pooling is used in","447104","Deep & Reinforcement Learning","",3
+"107669","Which of the following is not relevant to reinforcement learning ?","429604","Deep & Reinforcement Learning","",3
+"111635","Curse of dimensionality refers to","445462","Deep & Reinforcement Learning","",4
+"112003","Point out the correct statement.","446934","Deep & Reinforcement Learning","",0
+"112009","Reinforcement learning is also known as","446957","Deep & Reinforcement Learning","",3
+"112021","How In FeedForward ANN, information flows","447005","Deep & Reinforcement Learning","",3
+"112040","Dropout is applied","447083","Deep & Reinforcement Learning","",3
+"158161","Objective of  Epsilon Greedy Exploration Strategy include ------","631478","Deep & Reinforcement Learning","",4
+"144731","What steps can we take to prevent overfitting in a Neural Network?","577770","Deep & Reinforcement Learning","",4
+"158165","Suppose for a deep reinforcement learning we have to design the Learning equation for learning of agent. Important steps of learning equation includes ----","631497","Deep & Reinforcement Learning","",0
+"144809","How many main statistical methodologies are used in data analysis?","578083","Deep & Reinforcement Learning","",5
+"158173","How to update deep reinforcement  network weights using the learning equation?","631529","Deep & Reinforcement Learning","",4
+"144822","Data Analysis is defined by the statistician?","578139","Deep & Reinforcement Learning","",0
+"158177","Steps of Experience Replay algorithm includes ---","631545","Deep & Reinforcement Learning","",3
+"145896","Which of the following is/are Limitations of deep learning?","582433","Deep & Reinforcement Learning","",0
+"158178","Significance of Off-Policy algorithms for learning","631548","Deep & Reinforcement Learning","",3
+"145943","___________ is an optimization algorithm that's used when training a machine learning model.","582618","Deep & Reinforcement Learning","",3
+"158180","Advantage of experience Replay to learn in small batches  includes -----","631557","Deep & Reinforcement Learning","",5
+"145947","The choice of the cost function is tightly coupled with the choice of:","582636","Deep & Reinforcement Learning","",5
+"158299","Advantage of deep reinforcement learning for Programmatic Advertising is -----","632033","Deep & Reinforcement Learning","",0
+"145950","A Bernoulli distribution is deﬁned by just a _______ number.","582646","Deep & Reinforcement Learning","",4
+"158303","What are the steps of advertising exchanges work in the context of reinforcement learning?","632049","Deep & Reinforcement Learning","",4
+"145964","The input x provides the initial information that then propagates up to the hidden units at each layer and ﬁnally produces ˆy. This is called ________ propagation","582703","Deep & Reinforcement Learning","",3
+"158326","Type of Reinforcement learning is ----","632140","Deep & Reinforcement Learning","",4
+"145968","The ____________ algorithm allows the information from the cost to then ﬂow backward through the network in order to compute the gradient.","582718","Deep & Reinforcement Learning","",4
+"158357","What is ‘Training set’","632264","Deep & Reinforcement Learning","",3
+"146271","In the paradigm of semi-supervised learning, __________________ _______________ are used to estimate P(y | x) or predict y from x.","583930","Deep & Reinforcement Learning","",4
+"158362","What is the difference between CNN and ANN?","632285","Deep & Reinforcement Learning","",3
+"146315","Exploding gradients are a problem where large error gradients accumulate and result in very large updates to neural network model weights during __________.","584107","Deep & Reinforcement Learning","",3
+"158363","Slots and facets are used in","632286","Deep & Reinforcement Learning","",4
+"146333","Downsampling can be achieved with convolutional layers by changing the stride of the convolution across the image. A more robust and common approach is to use a ____________","584181","Deep & Reinforcement Learning","",3
+"158364","In Delta Rule for error minimization","632292","Deep & Reinforcement Learning","",4
+"146341","Distributing inference is simple, because each input example we want to process can be run by a separate machine. This is known as ___________.","584212","Deep & Reinforcement Learning","",0
+"158368","What are the following sequence of steps taken in designing a fuzzy logic machine","632306","Deep & Reinforcement Learning","",5
+"147569","Reinforcement learning differs from supervised learning in the following way(s):
+1. In supervised learning the training data has the answer key with it so the model is trained with the correct answer itself 
+2. In reinforcement learning, there is no answer but the reinforcement agent decides what to do to perform the given.","589112","Deep & Reinforcement Learning","",4
+"158372","What Is Gradient Descent?","632322","Deep & Reinforcement Learning","",4
+"152447","A  white and black Image has a size of  255 x 255. A filter of size 7 x 7
+is used to generate the features for the CNN. What is the size of the resulting feature matrix?","608623","Deep & Reinforcement Learning","",3
+"158375","What  is  ReLU layer?","632335","Deep & Reinforcement Learning","",3
+"152452","Which of the following attributes are relevant to a neural network
+a] Generalisation
+b] Massive parallelism
+c] Graceful degradation","608645","Deep & Reinforcement Learning","",3
+"152252","For the network shown, If the Bias w1 is -1.5, then what is the bias w2. The network trains an XoR data.","","Deep & Reinforcement Learning","https://aslapapi.aicte-india.org/files/questions/Question_1625421594.jpeg",3
+"158880","To perform various tasks in industry, what are advantages of learning-based robots ?","634355","Deep & Reinforcement Learning","",4
+"152915","The MLP network receives weighted summation of inputs and bias. This can be viewed as","610497","Deep & Reinforcement Learning","",4
+"152926","The bias for each Neuron in a MLP is responsible for","610538","Deep & Reinforcement Learning","",3
+"158149","Consider a deep reinforcement learning, the 'CartPole' environment, which is a simple environment where the objective is to move a cart left or right in order to balance an upright pole for as long as possible. Important factors to develop the state space of environment -----","631433","Deep & Reinforcement Learning","",3
+"158150","Consider a deep reinforcement learning, the 'CartPole' environment, which is a simple environment where the objective is to move a cart left or right in order to balance an upright pole for as long as possible. Important actions to develop the solution space of environment -----","631437","Deep & Reinforcement Learning","",3
+"158156","Suppose for a deep reinforcement learning we have to design the Q- learning algorithm for the agent learning. Important steps of  Q-learning algorithm includes ----","631461","Deep & Reinforcement Learning","",4
+"158160","Design goal/s of good deep reinforcement learning algorithm includes ----","631477","Deep & Reinforcement Learning","",3
+"158886","What are important task of Reinforcement Learning in Natural Language Processing ?","634381","Deep & Reinforcement Learning","",3
+"159049","The factors affect the performance of the learner system does not include","635030","Deep & Reinforcement Learning","",4
+"159050","While developing Reinforcement models, why you will run a lot of experiments?","635037","Deep & Reinforcement Learning","",3
+"159059","In a simple MLP model with 8 neurons in the input layer, 5 neurons in the hidden layer and 1 neuron in the output layer. What is the size of the weight matrices between hidden output layer and input hidden layer?","635072","Deep & Reinforcement Learning","",5
+"159064","A classic example of reinforcement learning in video display is -------","635090","Deep & Reinforcement Learning","",4
+"159066","Assume that your machine has a large enough RAM dedicated to training neural networks. Compared to using stochastic gradient descent for your optimization, choosing a batch size that fits your RAM will lead to","635100","Deep & Reinforcement Learning","",4
+"159072","Consider using reinforcement learning to control the motion of a robot arm in a repetitive pick-and-place task. Identify the components of such system","635125","Deep & Reinforcement Learning","",4
+"159074","A mobile robot has the job of collecting empty soda 'CANS' in an office environment. It has sensors for detecting cans, and an arm and gripper that can pick them up and place them in an onboard bin; it runs on a rechargeable battery. Identify role of This agent to decide actions initiated by  the robot.","635133","Deep & Reinforcement Learning","",3
+"159132","What is importance of model function for Reinforcement learning?","635365","Deep & Reinforcement Learning","",3
+"425","A _____ _____ copies all fields, and makes copies of dynamically allocated memory pointed to by the fields.","1698","Object-Oriented Programming","",4
+"648","Object consists of","2590","Object-Oriented Programming","",3
+"1391","setPrecision() is used to set the_________.","5561","Object-Oriented Programming","",3
+"1398","Function overloading means:
+i)	Same function name but different number of arguments
+ii)	Different function name but same number of arguments
+iii)	Same function name , same number of arguments but with different data type
+iv)	Different function name but different number of arguments","5590","Object-Oriented Programming","",4
+"1473","What would be the output of the following code?
+
+public class base
+{
+      public static void display()
+      {
+       System.out.println(""Base"");
+      }
+     public static void main(String[] args)
+     {
+     Base b = new derived();
+     b.display();
+      }
+}
+class derived extends base
+{
+   public static void display()
+  {
+     System.out.println(""Derived"");
+   }
+}","5890","Object-Oriented Programming","",3
+"1559","OOP follows ________ approach","6234","Object-Oriented Programming","",4
+"2540","Which exception is thrown by read() method?","10157","Object-Oriented Programming","",4
+"6380","The capability of a function or operator to act in different ways on different data types is known as","25518","Object-Oriented Programming","",4
+"6495","Which of the following statements is incorrect with respect to access specifiers?","25980","Object-Oriented Programming","",4
+"7555","Which of the following is not in the scope of exception handling?","30220","Object-Oriented Programming","",5
+"7924","Which one of the following functions cannot return values?","31696","Object-Oriented Programming","",4
+"8331","Which of the following cannot be made private?","33324","Object-Oriented Programming","",4
+"8557","If you attempt to catch exception of base class before catching the exception of derived class in C++ what should happen?","34225","Object-Oriented Programming","",3
+"8582","What will be the output of the following program?
+class Test2
+{
+	public: Test2() 
+	{ 
+	cout<< ""Test2's Constructor is Called ""; << endl;  
+	}
+};
+ 
+class Outcome
+{
+	static Test2 obj1;
+	public:
+	Outcome() 
+	{ 
+		Cout << ""Outcomes's Constructor is Called ""<< endl; 
+	}
+}; 
+ 
+void main() 
+{ 
+	Outcome obj2; 
+}","34327","Object-Oriented Programming","",3
+"33704","What is “System” in the statement System.out.print() used in Java.","134801","Object-Oriented Programming","",4
+"35106","Class College {
+   }
+  Class Department extends College {
+  }
+ Class Section extends Department {
+ }
+Which type of inheritance is shown in above code snippet","140404","Object-Oriented Programming","",4
+"35167","class A {
+    int a;
+}
+class B extends A {
+    int a;
+    B(int x, int y) {
+        super.a = x;
+        a = y;
+    }
+    void show() {
+    //Line 1
+    //Line 2
+    }
+}
+class Demo {
+    public static void main(String args[]) {
+        B b = new B(3, 4);
+        b.show();
+    }
+}
+From above code identify the lines of code to be written in Line 1 and Line 2 to get the output as:
+3
+4","140647","Object-Oriented Programming","",3
+"39937","In C++, operator which we cannot be overloaded is","140647","Object-Oriented Programming","",3
+"45906","Which is the additional feature that Class gives as compared to Structure in OOP ?","183189","Object-Oriented Programming","",4
+"76173","Choose the correct statement which creates an object to call the fun() method at /* Line 9 */","303693","Object-Oriented Programming","https://aslapapi.aicte-india.org/files/questions/Question_1622437836.PNG",4
+"76431","What would be the output of the following program?
+class ABC{
+	public static void main(String args[])	{
+		int X;
+		System.out.println(X);
+}}","304725","Object-Oriented Programming","",4
+"76132","","","Object-Oriented Programming","https://aslapapi.aicte-india.org/files/questions/Question_1622436840.PNG",4
+"130","Consider the following code segment of C++:
+#include <iostream>
+using namespace std;
+int main() {
+int a[] = {10, 20, 30, 40, 50};
+int *p[] = {a, a + 1, a + 2, a + 3, a + 4};
+int **q = p;
+**q++;
+cout << *a << "" "" << **p << "" "" << **q << "" "";
+q = p;
+++**q;
+cout << *a << "" "" << **p << "" "" << **q << endl;
+return 0;
+}
+What will be the output?","519","Object-Oriented Programming","",3
+"76183","What is the output of the following code?","","Object-Oriented Programming","https://aslapapi.aicte-india.org/files/questions/Question_1622438052.PNG",3
+"158881","Which step/s are important with respect to Industry automation with Reinforcement Learning?","634361","Deep & Reinforcement Learning","",0
+"158884","Scope for Reinforcement Learning applications in trading and finance,  is because of ----","634373","Deep & Reinforcement Learning","",3
+"77059","What will be the output of the program if 8 is given as input?
+int main()
+{
+int i;
+cin>>i;
+    for(int j=0; j<4; j++) {
+        i = i << 1; 
+        i = i << 2;
+    }
+cout<<i;
+    return 0;
+}","307235","Object-Oriented Programming","",4
+"77143","Choose the right code to insert, so that system will print “Rock Music” after type casting applied
+class Musics
+{
+    public:
+        static string music()
+        {
+            return ""music"";
+        }
+};
+class Rock: public Musics
+{
+   public:
+        static string music()
+        {
+            return ""Rock"";
+        } 
+};
+int main()
+{
+    Rock r;
+    //insert code
+cout<<r.music() + "" ""+m.music();
+cout<<""Hello World"";
+    return 0;
+}","307574","Object-Oriented Programming","",3
+"77193","What is the output of the code snippet?
+class Jumper {
+public:
+	virtual void jump()=0; 
+};
+class Animal {
+    public:
+    void jump()
+    {
+cout<<""animal jumps"";
+    }
+};
+class Chetah:public Animal { }; 
+class Panther: public Chetah,public Jumper{ 
+public:
+void jump() {cout<<""Panther jumps"";} 
+};
+
+class Leopard :public Jumper{ 
+public:
+void jump() {cout<<""leopard jumps"";} 
+} ;
+int main() {
+    Panther p;
+    Animal a=p;
+a.jump();
+	return 0;
+}","307774","Object-Oriented Programming","",3
+"77210","class Student
+{
+    private: int marks;
+    public:
+       //insert code
+};
+intprintScore(Student s)
+{
+s.marks +=25;
+    return s.marks;
+}
+int main()
+{
+    Student s;
+cout<<"" Score =""+//insert code;
+    return 0;
+}","307841","Object-Oriented Programming","",3
+"77455","class marksofstudent
+{    
+intsubjectmarks;  
+     public : int* fun()  
+     {   
+          return &subjectmarks;   
+     }  
+};  
+main()  
+{  
+marksofstudent s;  
+int *ptr = c.fun() ;  
+    return 0;  
+}","308822","Object-Oriented Programming","",3
+"77279","","","Object-Oriented Programming","https://aslapapi.aicte-india.org/files/questions/Question_1622448709.PNG",4
+"77466","Which object will be created first
+class student
+{
+int marks;};
+student s1,s2,s3;
+}","308863","Object-Oriented Programming","",3
+"77473","Consider the code and select the wrong choice
+class hero
+{
+       char name[10];
+     public: void disp()
+       {
+cout<<name;
+       }
+};","308892","Object-Oriented Programming","",4
+"77913","Which symbol is used to complete function declaration?","310708","Object-Oriented Programming","",5
+"77929","Consider 3 classes One, Two and Three. Class Two and Class Three are derived from Class One. Both the classes redefines the function in the base class and also overloads operators inside the class. Both function overloading and operator overloading are there. Interpret the type of polymorphism used.","310773","Object-Oriented Programming","",3
+"77956","What is not correct about ‘this’ pointer in C++?","310885","Object-Oriented Programming","",4
+"77961","In a Java program if the + operator is placed in between two strings, it","310905","Object-Oriented Programming","",4
+"77962","Dynamic binding is necessary when we refer to derived class object with _____.","310910","Object-Oriented Programming","",4
+"77978","The address of a derived class object is stored into a variable whose type is a pointer to the base class, then the object, when accessed using this pointer","310974","Object-Oriented Programming","",4
+"78009","Which of the following block is always executed, independently of an exception being raised?","311110","Object-Oriented Programming","",4
+"77998","Which of these methods is used to add elements in vector at specific location?","","Object-Oriented Programming","",5
+"92993","Correct way of single inheritance for classes: Circle and Shape:","311110","Object-Oriented Programming","",3
+"93639","Which OOP feature can be used in C language?","373495","Object-Oriented Programming","",3
+"101645","_____  method is used for developing technology and includes three types of studies − conceptual, empirical, and technical.","405517","Object-Oriented Programming","",3
+"101489","The point where the software entities interact with each other either in a single computer or in a network is known as ________.","404895","Object-Oriented Programming","",5
+"101730","Identify the decade when for the first time the concept of OOP came into limelight:","405859","Object-Oriented Programming","",3
+"101820","What do we need to use when we have multiple subscripts?","406217","Object-Oriented Programming","",4
+"102324","Which class is also considered as generic class in OOP?","408234","Object-Oriented Programming","",4
+"102364","From the following identify variable which violates the principle of encapsulation almost always:","408393","Object-Oriented Programming","",5
+"105411","Syntax for defining destructor for the Class A, in C++ is","420581","Object-Oriented Programming","",5
+"105441","Identify the valid syntax for defining Operator Overloading","420700","Object-Oriented Programming","",4
+"105639","This keyword facilitates the invocation of a method without the need of instantiating a class.","421493","Object-Oriented Programming","",3
+"105701","In this programming approach, modularity creates partitioned memory for both data and functions that can serve as templates for creating copies of similar modules on demand.","421742","Object-Oriented Programming","",4
+"106143","Which of the following iteration constructs is/are also known as entry controlled loop?
+
+C1. for loop
+C2. do..while loop
+C3. while loop
+C4. break
+C5. continue","423510","Object-Oriented Programming","",4
+"107666","What will the following code snippet yield on execution?
+
+int x=100, y=20;
+if(x>=100)
+if(y<20)
+System.out.println(x*y);
+else
+System.out.println(x+y);
+else
+if(y>=20)
+System.out.println(x/y);
+else
+System.out.println(x-y);","429592","Object-Oriented Programming","",3
+"144559","The number of nodes in the input layer is 10 and the hidden layer is 5. The maximum number of connections from the input layer to the hidden layer are","577082","Deep & Reinforcement Learning","",5
+"144694","For a binary classification problem, which of the following architecture would you choose?","577624","Deep & Reinforcement Learning","https://aslapapi.aicte-india.org/files/questions/Question_1624956850.jpg",4
+"146295","____________ offers a very computationally cheap and remarkably effective regularization method to reduce overfitting and improve generalization error in deep neural networks of all kinds.","584028","Deep & Reinforcement Learning","",4
+"77953","Class is pass by _______","310871","Object-Oriented Programming","",4
+"101622","Tools to develop a quick sketch of GUI. E.g., Microsoft Visio, Visual Studio .Net, etc.","405424","Object-Oriented Programming","",3
+"113215","Which of the following clauses will be executed even if no exceptions are found?","451781","Object-Oriented Programming","",4
+"107981","Polymorphism is/are of ______types.","430852","Object-Oriented Programming","",5
+"113279","Which Feature of OOPs illustrates the code reusability?","452039","Object-Oriented Programming","",4
+"108592","Which of the following concept is not a feature of OOC?","433290","Object-Oriented Programming","",4
+"116347","Which of the following is a way to achieve data hiding?","464307","Object-Oriented Programming","",3
+"108632","In C++, a unique keyword is used to represent an object that invokes a member function.","433449","Object-Oriented Programming","",3
+"116398","In Encapsulation, class attributes can be made write-only by the use of?","464510","Object-Oriented Programming","",3
+"108645","Keyword used to inherit a class is","433503","Object-Oriented Programming","",3
+"116508","Predict the output
+class Person {
+  private String name; 
+  public String getName() {
+    return name;
+  }
+  public void setName(String newName) {
+    this.name = newName;
+  }
+}
+public class HelloWorld {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.setName(""John"");  
+    System.out.println(myObj.name); 
+  }
+}","464945","Object-Oriented Programming","",4
+"110928","VTABLE is constructed in ________","442634","Object-Oriented Programming","",5
+"117409","Which of the following is not a promising area for application of object oriented programming?","468546","Object-Oriented Programming","",4
+"111104","Which statement displays the variable Welcome in a field 10 characters wide.","443337","Object-Oriented Programming","",3
+"117550","Which of the following items can be used in the same class?","469108","Object-Oriented Programming","",4
+"112196","If there is no value returned by the function, then the function return type should be specified as","447705","Object-Oriented Programming","",5
+"117709","Which constructors aren't allowed to have a return type?","469726","Object-Oriented Programming","",5
+"117838","Is it true that constructor overloading includes distinct return types for overloaded constructors?","470240","Object-Oriented Programming","",4
+"118412","What is the name of the feature that allows the same message to be sent to objects of many classes, each of which can respond differently?","472536","Object-Oriented Programming","",3
+"118467","The false about constructor is:","472758","Object-Oriented Programming","",5
+"119132","In C++, delete() is a","475419","Object-Oriented Programming","",3
+"119186","Which is true about static data members in c++?","475635","Object-Oriented Programming","",5
+"120884","C++ supports
+ a)operator overloading 
+b) function overloading","482426","Object-Oriented Programming","",4
+"120899","Dynamically allocated blocks of memory can be returned to the OS in C++ through","482485","Object-Oriented Programming","",4
+"120952","Which of the following shows multilevel inheritance","482698","Object-Oriented Programming","",4
+"121461","In C++ how many types of polymorphism exist?","484733","Object-Oriented Programming","",3
+"127076","What is the output of the following program?
+#include<iostream>
+
+using namespace std;
+main() { 
+   int x = 5;
+
+   if(x==5) {	
+      if(x==5) break;
+      cout<<""Hello"";
+   } 
+
+   cout<<”Hi”; 
+}","507189","Object-Oriented Programming","",3
+"127619","If a child class inherits the properties of two or more classes then such type of inheritance is called.","509361","Object-Oriented Programming","",4
+"127682","Data abstraction provides the feature of","509613","Object-Oriented Programming","",4
+"127755","Which of the following is not an Associative Containers in STL?","509906","Object-Oriented Programming","",4
+"127828","Choose the correct output of the following program:
+#include<iostream>
+#define PI 3.1417
+using namespace std;
+int Sarea(int &);
+int Carea(int &);
+int  main()
+{
+    int a=10;
+    cout<<Sarea(a)<<"" "";
+    cout<<Carea(a)<<"" "";
+    cout<<a;
+    return 0;
+}
+int Sarea(int &a){
+    return a*=a;}
+ int Carea(int &r){
+     return r=PI*r*r;
+ }","510196","Object-Oriented Programming","",3
+"128513","Determine the output of the following code
+#include<iostream>
+using namespace std;
+template <class T>
+void Swaping(T &x, T &y) {
+    T temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
+int main() {
+    int x=34, y=56;
+    Swaping(x, y);
+    cout  << x;
+    cout << "" "" << y;
+    return 0;
+}","512937","Object-Oriented Programming","",3
+"131560","Function Overloading can have","525123","Object-Oriented Programming","",4
+"133116","Which of the following statements is correct about the friend function in C++ programming language?","531345","Object-Oriented Programming","",4
+"133156","Q13	How can one implement the run-time Polymorphism in the C++ programming language?","531507","Object-Oriented Programming","",4
+"133206","Which of the following concept refers to adding new components to the program at the run time?","531704","Object-Oriented Programming","",4
+"133738","In the oops aquire the properties of the another class is called______________","533834","Object-Oriented Programming","",3
+"133863","a class consist of","534332","Object-Oriented Programming","",4
+"134390","Object cout and cin _________________","536440","Object-Oriented Programming","",4
+"139050","__________ method is used to convert a primitive type data into its corresponding wrapper class object instance.","555073","Object-Oriented Programming","",4
+"191551","“IS-A” relationship represents _________:","1693","Object-Oriented Programming","",4
+"194213","A prototype describes the function’s interface to the","482397","Object-Oriented Programming","",4
+"194214","An inline function is a function whose compiled code is","482406","Object-Oriented Programming","",3
+"194220","An example for polymorphism","","Object-Oriented Programming","",4
+"97031","You are building a binary classifier for recognizing cat (y=1) vs. dog (y=0). Which one of these activation functions would you recommend using for the output layer?","387060","Deep & Reinforcement Learning","",5
+"112059","Which is an activation function that predicts the probabilities of n classes (q1, q2..qk) such that summation of q over all n equals to 1 in the output layer?","447157","Deep & Reinforcement Learning","",3
+"159071","Suppose reinforcement learning is being applied to determine moment-by-moment temperatures and stirring rates for a bioreactor (a large vat of nutrients and bacteria used to produce useful chemicals). The actions in such an application might be -----","635121","Deep & Reinforcement Learning","",3
+"76987","What will be the output of the C++ program?
+#include<iostream>
+#include<string>
+using namespace std;
+class A
+{
+	int a;
+	public:
+	A() { a = 5;  }
+ 
+public:
+	void assign(int i) { a = i;  }
+	int return_value(){
+		return a;
+	}
+};
+int main()
+{
+	A obj;
+	obj.assign(10);
+	cout<<obj.return_value();
+	return 0;
+}
+
+5
+10","306948","Object-Oriented Programming","",3
+"107868","Where is the error in the following program?
+Class A{                                       //L1
+Public:                                         //L2
+Void fA();};                                  //L3
+Class B: protected A{                    //L4
+Public:                                        //L5
+Void fB();};                                 //L6
+Void main()                                 //L7
+{                                                //L8
+B objB;                                       //L9
+objB.fA();                                   //L10
+}                                               //L11","430401","Object-Oriented Programming","",3
