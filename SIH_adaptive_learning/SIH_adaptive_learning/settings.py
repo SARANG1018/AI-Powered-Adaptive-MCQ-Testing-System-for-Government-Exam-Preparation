@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2%-ro+34_%(p+h&!++%1xy(3mlui^g7%9gswk0i*-)v$(%q8w@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -83,27 +83,27 @@ WSGI_APPLICATION = 'SIH_adaptive_learning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sih1', 
-        'USER': 'postgres',
-        'PASSWORD': '2359361',
-        'HOST': '127.0.0.1', 
-        'PORT': '5450',
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'sih-bitlords-backend', 
+#         'NAME': 'sih1', 
 #         'USER': 'postgres',
-#         'PASSWORD': 'bitlords@123',
-#         'HOST': 'sih-postgress-bitlords.postgres.database.azure.com', 
-#         'PORT': '5432',
-#         'OPTIONS':{'sslmode': 'require',}
+#         'PASSWORD': '2359361',
+#         'HOST': '127.0.0.1', 
+#         'PORT': '5450',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sih-bitlords-backend', 
+        'USER': 'postgres',
+        'PASSWORD': 'bitlords@123',
+        'HOST': 'sih-postgress-bitlords.postgres.database.azure.com', 
+        'PORT': '5432',
+        'OPTIONS':{'sslmode': 'require',}
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
