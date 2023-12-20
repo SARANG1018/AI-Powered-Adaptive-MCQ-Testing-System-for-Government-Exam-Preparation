@@ -29,4 +29,5 @@ urlpatterns = [
     path('api/questions/', include('questions.urls')),
     path('api/question_analytics/', include('question_analytics.urls')),
     path('api/test-question/', include('test_question.urls')),
+    path('cors/', include('corsheaders.urls')),
 ]

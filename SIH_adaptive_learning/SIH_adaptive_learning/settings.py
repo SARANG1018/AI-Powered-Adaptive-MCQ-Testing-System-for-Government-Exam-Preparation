@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'student.apps.StudentConfig',
+    'corsheaders'
     'courses.apps.CoursesConfig',
     'level_of_education.apps.LevelOfEducationConfig',
     'specializations.apps.SpecializationsConfig',
@@ -49,11 +50,40 @@ INSTALLED_APPS = [
     'parakh_test.apps.ParakhTestConfig',
 ]
 
+# settings.py
+
+CORS_ALLOWED_ORIGINS = [
+   "*"
+]
+
+# Optional: You can also set more specific configurations
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
