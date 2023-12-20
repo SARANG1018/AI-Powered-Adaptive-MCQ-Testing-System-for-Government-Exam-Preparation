@@ -37,6 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'student.apps.StudentConfig',
+    'courses.apps.CoursesConfig',
+    'level_of_education.apps.LevelOfEducationConfig',
+    'specializations.apps.SpecializationsConfig',
+    'questions.apps.QuestionsConfig',
+    'question_analytics.apps.QuestionAnalyticsConfig',
+    'test_question.apps.TestQuestionConfig',
+    'user_analytics.apps.UserAnalyticsConfig',
+    'parakh_test.apps.ParakhTestConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,14 +86,24 @@ WSGI_APPLICATION = 'SIH_adaptive_learning.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sih', 
+        'NAME': 'sih1', 
         'USER': 'postgres',
         'PASSWORD': '2359361',
         'HOST': '127.0.0.1', 
         'PORT': '5450',
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'sih-bitlords-backend', 
+#         'USER': 'postgres',
+#         'PASSWORD': 'bitlords@123',
+#         'HOST': 'sih-postgress-bitlords.postgres.database.azure.com', 
+#         'PORT': '5432',
+#         'OPTIONS':{'sslmode': 'require',}
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
