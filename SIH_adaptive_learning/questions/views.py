@@ -10,12 +10,13 @@ from rest_framework.decorators import api_view
 from rest_framework.decorators import parser_classes
 from rest_framework.parsers import JSONParser
 
+from django.db import transaction
+
 
 # Create your views here.
 # question set
 @csrf_exempt
-@api_view(("POST",))
-@parser_classes([JSONParser])
+@api_view(['GET'])
 def Question_get(request):
     data=random_question(request.data)
     return JsonResponse(
@@ -27,7 +28,7 @@ def Question_get(request):
 
 @csrf_exempt
 # create new question
-def CreateQuestions(request):
+def CreateQuestion(request):
     if request.method == 'POST':
         try:
             question = json.loads(request.body)
@@ -57,36 +58,42 @@ def CreateQuestions(request):
 def CreateQuestionsMultiple(request):
     if request.method == 'POST':
         try:
-            questions = json.loads(request.body)
-
+            questions = json.loads(request.body)["questions"]
+            
+            questions_to_be_created=[]
+            options_to_be_created=[]
+            question_options=[]
+            specializations_to_be_created=set()
             for question_data in questions:
-                question_obj = Questions.objects.create(
-                    id=question_data["id"],
+                question_obj=Questions(id=question_data["id"],
                     title=question_data['title'],
-                    attachment=question_data['attachment']
-                )
-
-                special = None
-
-                if question_data["specialization"] is not None:
-
-                    special = Specialization.objects.filter(specialization_name=question_data["specialization"]).first()
-                    if special is None:
-                        special = Specialization.objects.create(specialization_name=question_data["specialization"])
-
+                    attachment=question_data['attachment'])
+                questions_to_be_created.append(question_obj)
+                option_array=[]
                 for option_data in question_data['options']:
-                    option_obj = Options.objects.create(
-                        option_id=option_data['id'],
+                    option_obj=Options(option_id=option_data['id'],
                         option_title=option_data['option'],
-                        option_attachment=option_data['attachment']
-                    )
-                    option_obj.save()
-                    question_obj.options.add(option_obj)
+                        option_attachment=option_data['attachment'])
+                    options_to_be_created.append(option_obj)
+                    option_array.append(option_obj)
 
-                if question_data.get("answer_id") is not None:
+                question_options.append(option_array)
+                if(question_data["specialization"]!=None):
+                    specializations_to_be_created.add(question_data["specialization"])
+            specializations_objs=[]
+            for i in specializations_to_be_created:
+                specializations_objs.append(Specialization(specialization_name=i))
 
-                    question_obj.answer = Options.objects.get(id=question_data["answer_id"])
-                    question_obj.save()
+            with transaction.atomic():
+                
+                Options.objects.bulk_create(options_to_be_created,ignore_conflicts=True)
+                Specialization.objects.bulk_create(specializations_objs,ignore_conflicts=True) 
+                Questions.objects.bulk_create(questions_to_be_created,ignore_conflicts=True)
+                
+            for question_obj, option_array in zip(questions_to_be_created, question_options):
+                question_obj.options.set(option_array)
+
+                
 
             return JsonResponse({'success': True, 'message': 'Questions uploaded successfully'})
 

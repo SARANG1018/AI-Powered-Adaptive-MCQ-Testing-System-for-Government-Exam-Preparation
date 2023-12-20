@@ -3,7 +3,7 @@ from django.db import models
 from level_of_education.models import LevelOfEducation
 
 class Courses(models.Model):
-    courses_id = models.IntegerField(primary_key=True)
+    courses_id = models.BigAutoField(primary_key=True)
     courses_name = models.CharField(max_length=255)
     level = models.ForeignKey(LevelOfEducation, on_delete=models.CASCADE)
 

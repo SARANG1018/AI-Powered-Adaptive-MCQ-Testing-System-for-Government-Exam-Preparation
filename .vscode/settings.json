@@ -18,6 +18,16 @@
             "name": "SIH2",
             "database": "sih1",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "sih-postgress-bitlords.postgres.database.azure.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "SIH_LIVE",
+            "database": "sih-bitlords-backend",
+            "username": "postgres",
+            "password": "bitlords@123"
         }
     ]
 }

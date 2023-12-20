@@ -2,7 +2,7 @@
 from django.db import models
 
 class LevelOfEducation(models.Model):
-    level_of_education_id = models.IntegerField(primary_key=True)
+    level_of_education_id = models.BigAutoField(primary_key=True)
     level_of_education_name = models.TextField()
 
     def __str__(self):
