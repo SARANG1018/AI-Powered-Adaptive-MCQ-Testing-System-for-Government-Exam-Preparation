@@ -3,11 +3,11 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_DB: sih
+      POSTGRES_DB: sih1
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 011000101
     ports:
       - '5450:5432'
-    volumes:
+    # volumes:
       #db:/var/lib/postgresql/data
-      - ./SIH_dump.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    
