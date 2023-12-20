@@ -3,7 +3,7 @@ from django.db import models
 from student.models import Student
 from specializations.models import Specialization
 
-class Test(models.Model):
+class Parakh_Test(models.Model):
     test_id = models.IntegerField(primary_key=True)
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
     specialization_id = models.ForeignKey(Specialization, on_delete=models.CASCADE)
@@ -13,4 +13,4 @@ class Test(models.Model):
         return f"Test {self.test_id} - Student: {self.student_id.student_name}, Specialization: {self.specialization_id.specialization_name}, Date: {self.date}"
     
     class Meta: 
-        db_table = 'test'
+        db_table = 'parakh_test'

@@ -8,7 +8,6 @@ class OptionSerializer(serializers.ModelSerializer):
 
 class QuestionSerializer(serializers.ModelSerializer):
     options = OptionSerializer(many=True, required=False)
-
     class Meta:
         model = Questions
         fields = ["id", "title", "options", "attachment", "specialization"]

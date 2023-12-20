@@ -1,14 +1,14 @@
 # test/views.py
 from rest_framework import generics
 from rest_framework import filters
-from .models import Test
+from .models import Parakh_Test
 from .serializers import TestCreateSerializer
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from specializations.models import Specialization
 from student.models import Student
 class TestListView(generics.ListAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['test_id', 'student_id__student_id', 'specialization_id__specialization_id', 'date']
@@ -39,7 +39,7 @@ def create_test(request):
         specialization_id = Specialization.objects.get(specialization_id=json_data['specialization_id'])
         date = json_data['date']
 
-        test = Test(test_id=test_id, student_id=student_id, specialization_id=specialization_id, date=date)
+        test = Parakh_Test(test_id=test_id, student_id=student_id, specialization_id=specialization_id, date=date)
         test.save()
         return HttpResponse("Test created successfully")
 
@@ -47,13 +47,13 @@ def create_test(request):
         return HttpResponse("Error creating test")
 
 class TestRetrieveView(generics.RetrieveAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
 
 class TestUpdateView(generics.UpdateAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
 
 class TestDestroyView(generics.DestroyAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
