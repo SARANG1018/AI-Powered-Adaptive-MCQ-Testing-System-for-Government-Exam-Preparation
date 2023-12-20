@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./quetionaire
+        working-directory: ./SIH_adaptive_learning
 
     steps:
       - uses: actions/checkout@v4
