@@ -5,17 +5,18 @@ from .serializers import QuestionSerializer
 from random import sample
 import math
 from ml_models.algorithms.IRT import next_difficulty_onIRT_3PL, next_ability_onIRT_3PL
-
-
-def random_question(json):
+from test_question.models import TestQestions
+from student.models import Student
+def random_question(user_proficiency):
     try:
         # Get 25 random questions
-        all_questions = list(Questions.objects.all())
+        all_questions = Questions.objects.all()
 
-        random_questions = sample(all_questions, min(25, len(all_questions)))
+        # random_questions = sample(all_questions, min(25, len(all_questions)))
+        personalised_questions_id_list=generate_questions(25,list(all_questions),user_proficiency)
 
         # Serialize the questions
-        serializer = QuestionSerializer(random_questions, many=True)
+        serializer = QuestionSerializer(all_questions.filter(id__in=personalised_questions_id_list), many=True)
 
         # Return the serialized data
         return serializer.data
@@ -64,26 +65,27 @@ def update_user_proficiency(user_proficiency, ability_of_student):
 
 
 def generate_questions(
-    num_questions, questions, user_proficiency, assigned_questions, kmeans_clusters
+    num_questions, questions, user_proficiency
 ):
     distances = {}
 
     # Calculate distances between user proficiency and question difficulties
-    for question_id, difficulty in questions.items():
-        distance = abs(difficulty - user_proficiency)
-        distances[question_id] = distance
+    for question in questions:
+        distance = abs(question.difficulty - user_proficiency)
+        distances[question.id] = distance
 
     # Sort questions based on distances
     sorted_questions = sorted(distances.keys(), key=lambda x: distances[x])
 
     # Filter out questions that have already been assigned
-    available_questions = [q for q in sorted_questions if q not in assigned_questions]
+    # available_questions = [q for q in sorted_questions if q not in assigned_questions]
 
     # Select new questions for the user
-    selected_questions = available_questions[:num_questions]
+    selected_questions = sorted_questions[:num_questions]
+
 
     # Update the list of assigned questions
-    assigned_questions.extend(selected_questions)
+    # assigned_questions.extend(selected_questions)
 
     return selected_questions
 

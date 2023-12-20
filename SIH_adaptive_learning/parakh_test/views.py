@@ -5,6 +5,8 @@ from .models import Parakh_Test
 from .serializers import TestCreateSerializer
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from student.models import Student
+from specializations.models import Specialization
 class TestListView(generics.ListAPIView):
     queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
@@ -35,9 +37,8 @@ def create_test(request):
         test_id = json_data['test_id']
         student_id = Student.objects.get(student_id=json_data['student_id'])
         specialization_id = Specialization.objects.get(specialization_id=json_data['specialization_id'])
-        date = json_data['date']
-
-        test = Parakh_Test(test_id=test_id, student_id=student_id, specialization_id=specialization_id, date=date)
+        
+        test = Parakh_Test(test_id=test_id, student_id=student_id, specialization_id=specialization_id)
         test.save()
         return HttpResponse("Test created successfully")
 
