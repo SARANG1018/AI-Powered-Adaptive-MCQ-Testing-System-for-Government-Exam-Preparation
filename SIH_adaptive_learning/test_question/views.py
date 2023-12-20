@@ -32,8 +32,8 @@ def question_attempt(request):
     )
     # return JsonResponse({"success": True}, status=200)
 
-    def test_questions(request,number_questions):
-        for number in number_questions:
-            question_attempt(request)
+    # def test_questions(request,number_questions):
+    #     for number in number_questions:
+    #         question_attempt(request)
 
 

@@ -31,7 +31,13 @@ def CreateQuestions(request):
     if request.method == 'POST':
         try:
             question = json.loads(request.body)
-            question_obj=Questions.objects.create(id=question["id"],title=question['title'],specialization=question["specialization"],attachment=question['attachment'])
+            question_obj=Questions.objects.create(id=question["id"],title=question['title'],attachment=question['attachment'])
+            special=None
+
+            if(question["specialization"]!=None):
+                special=Specialization.objects.filter(specialization_name=question["specialization"])
+                if(special==None):
+                    special=Specialization.objects.create(specialization_name=question["specialization"])
             for option in question['options']:
                 option_obj=Options.objects.create(option_id=option['id'],option_title=option['option'],option_attachment=option['attachment'])
                 option_obj.save()
@@ -45,6 +51,53 @@ def CreateQuestions(request):
             return JsonResponse({'success': False, 'error': str(e)})        
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=400)
+    
+@csrf_exempt
+# upload multiple files
+def CreateQuestions(request):
+    if request.method == 'POST':
+        try:
+            questions = json.loads(request.body)
+
+            for question_data in questions:
+
+                question_obj = Questions.objects.create(
+                    id=question_data["id"],
+                    title=question_data['title'],
+                    attachment=question_data['attachment']
+                )
+
+                special = None
+
+                if question_data["specialization"] is not None:
+
+                    special = Specialization.objects.filter(specialization_name=question_data["specialization"]).first()
+                    if special is None:
+                        special = Specialization.objects.create(specialization_name=question_data["specialization"])
+
+                for option_data in question_data['options']:
+                    option_obj = Options.objects.create(
+                        option_id=option_data['id'],
+                        option_title=option_data['option'],
+                        option_attachment=option_data['attachment']
+                    )
+                    option_obj.save()
+                    question_obj.options.add(option_obj)
+
+                if question_data.get("answer_id") is not None:
+
+                    question_obj.answer = Options.objects.get(id=question_data["answer_id"])
+                    question_obj.save()
+
+            return JsonResponse({'success': True, 'message': 'Questions uploaded successfully'})
+
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})
+
+    else:
+        return JsonResponse({'error': 'Invalid request method'}, status=400)
+
+
 
 @csrf_exempt
     #Update the existing question 
