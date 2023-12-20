@@ -1,11 +1,14 @@
 # test/views.py
 from rest_framework import generics
 from rest_framework import filters
-from .models import Test
+from .models import Parakh_Test
 from .serializers import TestCreateSerializer
-
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from specializations.models import Specialization
+from student.models import Student
 class TestListView(generics.ListAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['test_id', 'student_id__student_id', 'specialization_id__specialization_id', 'date']
@@ -26,19 +29,31 @@ class TestListView(generics.ListAPIView):
         if specialization_id:
             queryset = queryset.filter(specialization_id__specialization_id=specialization_id)
         return queryset
+@csrf_exempt
+def create_test(request):
+    import json
+    if request.method == 'POST':
+        json_data=json.loads(request.body)
+        test_id = json_data['test_id']
+        student_id = Student.objects.get(student_id=json_data['student_id'])
+        specialization_id = Specialization.objects.get(specialization_id=json_data['specialization_id'])
+        date = json_data['date']
 
-class TestCreateView(generics.CreateAPIView):
-    queryset = Test.objects.all()
-    serializer_class = TestCreateSerializer
+        test = Parakh_Test(test_id=test_id, student_id=student_id, specialization_id=specialization_id, date=date)
+        test.save()
+        return HttpResponse("Test created successfully")
+
+    else:
+        return HttpResponse("Error creating test")
 
 class TestRetrieveView(generics.RetrieveAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
 
 class TestUpdateView(generics.UpdateAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
 
 class TestDestroyView(generics.DestroyAPIView):
-    queryset = Test.objects.all()
+    queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer

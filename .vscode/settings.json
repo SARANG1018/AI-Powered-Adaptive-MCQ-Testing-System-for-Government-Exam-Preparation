@@ -9,6 +9,15 @@
             "database": "sih1",
             "username": "postgres",
             "password": "2359361"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5450,
+            "driver": "PostgreSQL",
+            "name": "SIH2",
+            "database": "sih1",
+            "username": "postgres"
         }
     ]
 }

@@ -22,9 +22,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/student/', include('student.urls')),
-    path('api/tests/', include('test.urls')),
+    path('api/tests/', include('parakh_test.urls')),
     path('api/courses/', include('courses.urls')),
     path('api/levels/', include('level_of_education.urls')),
     path('api/specializations/', include('specializations.urls')),
-    path('api/questions/', include('questions.url')),
+    path('api/questions/', include('questions.urls')),
+    path('api/question_analytics/', include('question_analytics.urls')),
+    path('api/test-question/', include('test_question.urls')),
 ]

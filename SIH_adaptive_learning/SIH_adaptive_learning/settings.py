@@ -39,11 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'student.apps.StudentConfig',
-    'test.apps.TestConfig',
     'courses.apps.CoursesConfig',
     'level_of_education.apps.LevelOfEducationConfig',
     'specializations.apps.SpecializationsConfig',
     'questions.apps.QuestionsConfig',
+    'question_analytics.apps.QuestionAnalyticsConfig',
+    'test_question.apps.TestQuestionConfig',
+    'user_analytics.apps.UserAnalyticsConfig',
+    'parakh_test.apps.ParakhTestConfig',
 ]
 
 MIDDLEWARE = [

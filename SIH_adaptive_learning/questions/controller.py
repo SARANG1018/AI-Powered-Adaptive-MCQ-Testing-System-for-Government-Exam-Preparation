@@ -97,7 +97,7 @@ def update_user_proficiency(
     lesson_difficulty,  # To be calculated
     correctness_probability,
     total_responses_of_question,# Us question ke kitne Response hai
-    total_question_count, # Total Questions in a domain
+    total_question_count, # Total Questions in a specialization
 ):
     ability_parameter = calculate_ability_parameter(
         total_responses_of_question, 4, total_question_count

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class QuestionOptionsConfig(AppConfig):
+class QuestionAnalyticsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'question_options'
+    name = 'question_analytics'

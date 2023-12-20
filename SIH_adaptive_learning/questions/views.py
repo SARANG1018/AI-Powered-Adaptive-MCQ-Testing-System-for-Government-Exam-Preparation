@@ -93,3 +93,9 @@ def DeleteQuestions(request,id):
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=400)
     
+
+# calculation level of questions
+# def level_question(request,id):
+#     data = json.loads(request.body)
+#     question = Questions.objects.get(pk=id)
+#     question.= data.get('title', question.title)
