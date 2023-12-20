@@ -54,13 +54,12 @@ def CreateQuestions(request):
     
 @csrf_exempt
 # upload multiple files
-def CreateQuestions(request):
+def CreateQuestionsMultiple(request):
     if request.method == 'POST':
         try:
             questions = json.loads(request.body)
 
             for question_data in questions:
-
                 question_obj = Questions.objects.create(
                     id=question_data["id"],
                     title=question_data['title'],
