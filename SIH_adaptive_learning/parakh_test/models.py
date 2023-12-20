@@ -4,7 +4,7 @@ from student.models import Student
 from specializations.models import Specialization
 
 class Parakh_Test(models.Model):
-    test_id = models.IntegerField(primary_key=True)
+    test_id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
     specialization_id = models.ForeignKey(Specialization, on_delete=models.CASCADE,null=True)
    
