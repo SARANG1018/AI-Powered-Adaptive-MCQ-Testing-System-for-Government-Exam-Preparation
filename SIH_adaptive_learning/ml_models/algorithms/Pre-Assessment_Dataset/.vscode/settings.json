@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "sih-postgress-bitlords.postgres.database.azure.com",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "sih-postgress-bitlords-db",
+      "database": "sih-postgress-bitlords-db",
+      "username": "postgres"
+    }
+  ]
+}
