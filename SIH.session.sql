@@ -18,3 +18,7 @@ SELECT * FROM ques2special;
 
 --@block
 SELECT * FROM options;
+
+
+
+SELECT * from parakh_test;

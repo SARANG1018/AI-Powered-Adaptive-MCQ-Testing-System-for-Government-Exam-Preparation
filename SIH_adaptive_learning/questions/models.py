@@ -17,6 +17,7 @@ class Questions(models.Model):
     options=models.ManyToManyField(Options, blank=True)
     answer_id = models.ForeignKey(Options,on_delete=models.CASCADE,related_name="question2option",null=True,blank=True)
     specialization=models.ForeignKey( Specialization,on_delete=models.CASCADE,related_name="ques2special",null=True,blank=True)
+    difficulty=models.FloatField(default=0.5)
     class Meta:
         db_table = "questions"
 

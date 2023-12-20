@@ -19,9 +19,6 @@ class TestQestions(models.Model):
     student=models.ForeignKey( Student,on_delete=models.CASCADE,related_name="iduser",null=True,blank=True)
     # whether the answer is correct or incorrect
     correct=models.BooleanField(null=True,blank=True)
-    #avg of time taken to solve the each question
-    average_time=models.FloatField(null=True,blank=True)
-    test_difficulty=models.FloatField(null=True,blank=True)     #test_difficulty(lesson_difficulty) 
-    accuracy=models.FloatField(null=True,blank=True)
+   
     class meta:
         db_table="Test_Question"

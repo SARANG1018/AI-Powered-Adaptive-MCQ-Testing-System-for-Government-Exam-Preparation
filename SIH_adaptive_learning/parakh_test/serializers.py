@@ -8,7 +8,7 @@ from specializations.models import Specialization
 class TestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Parakh_Test
-        fields = ['test_id', 'student_id', 'specialization_id', 'date']
+        fields = ['test_id', 'student_id', 'specialization_id',"accuracy","average_time","test_difficulty" ]
 
 class TestCreateSerializer(serializers.ModelSerializer):
     # student_id = serializers.PrimaryKeyRelatedField(queryset=Student.objects.all(), source='student',write_only=True)
@@ -18,4 +18,4 @@ class TestCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Parakh_Test
-        fields = ['test_id', 'student', 'specialization', 'date']
+        fields = ['test_id', 'student', 'specialization']

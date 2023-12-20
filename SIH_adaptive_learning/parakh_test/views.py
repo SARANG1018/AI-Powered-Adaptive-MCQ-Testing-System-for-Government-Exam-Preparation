@@ -5,8 +5,6 @@ from .models import Parakh_Test
 from .serializers import TestCreateSerializer
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from specializations.models import Specialization
-from student.models import Student
 class TestListView(generics.ListAPIView):
     queryset = Parakh_Test.objects.all()
     serializer_class = TestCreateSerializer
