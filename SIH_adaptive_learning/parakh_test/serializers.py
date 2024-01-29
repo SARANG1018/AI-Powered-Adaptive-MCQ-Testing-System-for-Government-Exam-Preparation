@@ -13,9 +13,9 @@ class TestSerializer(serializers.ModelSerializer):
 class TestCreateSerializer(serializers.ModelSerializer):
     # student_id = serializers.PrimaryKeyRelatedField(queryset=Student.objects.all(), source='student',write_only=True)
     # specialization_id = serializers.PrimaryKeyRelatedField(queryset=Specialization.objects.all(), source='specialization',write_only=True)
-    student = serializers.PrimaryKeyRelatedField( read_only=True)
-    specialization = serializers.PrimaryKeyRelatedField( read_only=True)
+    student_id_id = serializers.PrimaryKeyRelatedField( read_only=True)
+    specialization_id = serializers.PrimaryKeyRelatedField( read_only=True)
 
     class Meta:
         model = Parakh_Test
-        fields = ['test_id', 'student', 'specialization']
+        fields = ['test_id', 'student_id_id', 'specialization_id',' average_time','test_difficulty','accuracy']
