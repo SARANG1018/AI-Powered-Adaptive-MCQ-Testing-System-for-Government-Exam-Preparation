@@ -20,5 +20,9 @@ SELECT * FROM ques2special;
 SELECT * FROM options;
 
 
-
+--@block
 SELECT * from parakh_test;
+
+
+--@block
+ALTER TABLE "parakh_test" CHANGE "test_id" "test_id" INT(11) AUTO_INCREMENT NOT NULL;

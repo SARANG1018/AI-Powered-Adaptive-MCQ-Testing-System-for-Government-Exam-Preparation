@@ -34,16 +34,15 @@ def create_test(request):
     import json
     if request.method == 'POST':
         json_data=json.loads(request.body)
-        test_id = json_data['test_id']
         student_id = Student.objects.get(student_id=json_data['student_id'])
         specialization_id = Specialization.objects.get(specialization_id=json_data['specialization_id'])
         
-        test = Parakh_Test(test_id=test_id, student_id=student_id, specialization_id=specialization_id)
+        test = Parakh_Test(student_id=student_id, specialization_id=specialization_id)
         test.save()
         return HttpResponse("Test created successfully")
 
     else:
-        return HttpResponse("Error creating test")
+        return HttpResponse("Did you mean to call POST Request?")
 
 class TestRetrieveView(generics.RetrieveAPIView):
     queryset = Parakh_Test.objects.all()

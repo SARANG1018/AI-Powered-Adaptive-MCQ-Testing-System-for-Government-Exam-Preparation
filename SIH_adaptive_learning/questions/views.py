@@ -19,7 +19,10 @@ from django.db import transaction
 @api_view(['GET'])
 def Question_get(request):
     json_data = request.query_params
+
     analysis,_=User_analysis.objects.get_or_create(student_id=Student.objects.get(student_id=json_data['student_id']),specialization=Specialization.objects.get(specialization_id=json_data["specialization_id"]) if json_data.get("specialization_id",None) != None else None)
+    print(analysis.user_proficiency)
+    print(analysis.id)
     data=random_question(analysis.user_proficiency)
     return JsonResponse(
         {

@@ -27,6 +27,9 @@ def next_difficulty_onIRT_1PL(ability_of_student,difficulty_of_question):
     return logit_inverse(ability_of_student-temp)
 
 def calculate_discrimination_param(ability_of_student,difficulty_of_question):
+    print("Discrim param :")
+    print(ability_of_student)
+    print(difficulty_of_question)
     return logit(IRT_1PL_Probab(ability_of_student,difficulty_of_question))-logit(IRT_1PL_Probab(ability_of_student,difficulty_of_question))
 
 # 3PL_IRT Model 

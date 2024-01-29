@@ -5,7 +5,7 @@ from parakh_test.models import Parakh_Test
 from specializations.models import Specialization
 from student.models import Student
 from django.http import JsonResponse
-from ml_models.algorithms.IRT import next_ability_onIRT_3PL,next_difficulty_onIRT_3PL
+from ml_models.algorithms.IRT import next_ability_onIRT_1PL,next_difficulty_onIRT_1PL
 from user_analytics.models import User_analysis
 from parakh_test.serializers import TestSerializer
 # Create your views here.
@@ -55,23 +55,25 @@ def test_attempt(request):
     current_user_proficiency=user_analytics.user_proficiency
     
     test_obj = Parakh_Test.objects.create(
-        test_id=json_data["test_id"],
         student_id=student,
         specialization_id=specialization,
     )
     total_questions = len(json_data["attempts"])
     correct_questions = 0
     total_time = 0
+    test_difficulty=0
 
     for question in json_data["attempts"]:
         current_question = Questions.objects.filter(
             id=question["question_id"]
         ).first()
         correct = None
-        test_difficulty=0
         current_question_difficulty=current_question.difficulty
         if current_question.answer_id != None:
             correct = current_question.answer_id.id == question["selected_option_id"]
+        else:
+            import random
+            correct = random.choice([True, False])
         all_test_question_attempts.append(
             TestQestions(
                 time_required=question["time_required"],
@@ -85,25 +87,25 @@ def test_attempt(request):
         total_time += question["time_required"]
         if correct:
             correct_questions += 1
-        current_user_proficiency=next_ability_onIRT_3PL(float(current_user_proficiency),float(current_question_difficulty))
-        current_question_difficulty=next_difficulty_onIRT_3PL(float(current_user_proficiency),float(current_question_difficulty))
+        current_user_proficiency=next_ability_onIRT_1PL(float(current_user_proficiency),float(current_question_difficulty))
+        current_question_difficulty=next_difficulty_onIRT_1PL(float(current_user_proficiency),float(current_question_difficulty))
         current_question.difficulty=current_question_difficulty
         current_question.save()
         test_difficulty+=current_question_difficulty
 
 
-    accuracy = correct_questions / total_questions
-    average_time = total_time / total_questions
+    accuracy = correct_questions / max(total_questions,1)
+    average_time = total_time / max(total_questions,1)
     test_score=correct_questions
-
-
     test_obj.accuracy = accuracy
     test_obj.average_time = average_time
     test_obj.test_score=test_score
-    test_obj.test_difficulty=test_difficulty/total_questions
+    test_obj.test_difficulty=test_difficulty/max(total_questions,1)
     user_analytics.user_proficiency=current_user_proficiency
     user_analytics.save()
     test_obj.save()
+    print(current_user_proficiency) 
+    print(user_analytics.id)
     TestQestions.objects.bulk_create(all_test_question_attempts)
     return JsonResponse({"success": True,"results":TestSerializer(test_obj).data}, status=200)
 
