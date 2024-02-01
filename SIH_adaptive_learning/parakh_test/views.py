@@ -2,14 +2,14 @@
 from rest_framework import generics
 from rest_framework import filters
 from .models import Parakh_Test
-from .serializers import TestCreateSerializer
+from .serializers import TestCreateSerializer,TestSerializer
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from student.models import Student
 from specializations.models import Specialization
 class TestListView(generics.ListAPIView):
     queryset = Parakh_Test.objects.all()
-    serializer_class = TestCreateSerializer
+    serializer_class = TestSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['test_id', 'student_id__student_id', 'specialization_id__specialization_id', 'date']
 
@@ -46,12 +46,12 @@ def create_test(request):
 
 class TestRetrieveView(generics.RetrieveAPIView):
     queryset = Parakh_Test.objects.all()
-    serializer_class = TestCreateSerializer
+    serializer_class = TestSerializer
 
 class TestUpdateView(generics.UpdateAPIView):
     queryset = Parakh_Test.objects.all()
-    serializer_class = TestCreateSerializer
+    serializer_class = TestSerializer
 
 class TestDestroyView(generics.DestroyAPIView):
     queryset = Parakh_Test.objects.all()
-    serializer_class = TestCreateSerializer
+    serializer_class = TestSerializer
