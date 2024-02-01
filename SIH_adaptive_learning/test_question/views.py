@@ -8,6 +8,8 @@ from django.http import JsonResponse
 from ml_models.algorithms.IRT import next_ability_onIRT_1PL,next_difficulty_onIRT_1PL
 from user_analytics.models import User_analysis
 from parakh_test.serializers import TestSerializer
+from .serializers import TestQuestionSerializer
+from .models import TestQestions
 # Create your views here.
 def load_json_from_request(request):
     import json
@@ -109,3 +111,13 @@ def test_attempt(request):
     TestQestions.objects.bulk_create(all_test_question_attempts)
     return JsonResponse({"success": True,"results":TestSerializer(test_obj).data}, status=200)
 
+@csrf_exempt
+def get_question_attempt(req):
+    if(req.GET.get("test_id")==None):
+        return JsonResponse({"success": False}, status=400)
+    if(req.GET.get("student_id")==None):
+        return JsonResponse({"success": False}, status=400)
+    questions=[quest for quest in TestQestions.objects.filter(test_attempted=req.GET.get("test_id"),student=req.GET.get("student_id"))]
+    
+
+    return JsonResponse({"success": True,"results":TestQuestionSerializer(questions,many=True).data}, status=200)

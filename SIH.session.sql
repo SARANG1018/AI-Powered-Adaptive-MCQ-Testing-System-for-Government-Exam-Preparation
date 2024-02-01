@@ -17,7 +17,7 @@ SELECT * FROM ques2special;
 
 
 --@block
-SELECT * FROM options;
+SELECT * FROM test_question_testqestions;
 
 
 --@block
