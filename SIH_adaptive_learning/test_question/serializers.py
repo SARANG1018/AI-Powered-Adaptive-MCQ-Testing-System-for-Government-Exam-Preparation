@@ -5,7 +5,8 @@ from questions.serializers import OptionSerializer
 from .models import TestQestions
 
 class TestQuestionSerializer(serializers.ModelSerializer):
-    # question=QuestionSerializer(many=True, required=False)
+    question=QuestionSerializer( required=False)
+    option_marked=OptionSerializer(required=False)
     class Meta:
         model=TestQestions
         fields=["id","time_required","question","option_marked","test_attempted","student","correct"]
